@@ -92,7 +92,7 @@ class _QuoteOHomepageState extends State<QuoteOHomepage> {
       floatingActionButton: FloatingActionButton(
         onPressed: getQuote,
         tooltip: 'New Quote',
-        child: Icon(Icons.refresh),
+        child: Icon(Icons.autorenew),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
