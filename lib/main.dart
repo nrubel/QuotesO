@@ -83,8 +83,8 @@ class _QuoteOHomepageState extends State<QuoteOHomepage> {
             ),
             Expanded(
               child: Container(
-                color: Colors.indigoAccent,
-              ),
+//                color: Colors.indigoAccent,
+                  ),
             ),
           ],
         ),
@@ -93,6 +93,42 @@ class _QuoteOHomepageState extends State<QuoteOHomepage> {
         onPressed: getQuote,
         tooltip: 'New Quote',
         child: Icon(Icons.refresh),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: BottomAppBar(
+        color: Theme.of(context).colorScheme.primary,
+        shape: CircularNotchedRectangle(),
+        child: IconTheme(
+          data: IconThemeData(
+            color: Theme.of(context).colorScheme.onPrimary,
+          ),
+          child: Row(
+            children: <Widget>[
+              IconButton(
+                tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+                icon: Icon(Icons.menu),
+                onPressed: () {
+                  print('menu clicked');
+                },
+              ),
+              Spacer(),
+              IconButton(
+                tooltip: MaterialLocalizations.of(context).searchFieldLabel,
+                icon: Icon(Icons.search),
+                onPressed: () {
+                  print('menu clicked');
+                },
+              ),
+              IconButton(
+                tooltip: MaterialLocalizations.of(context).alertDialogLabel,
+                icon: Icon(Icons.favorite),
+                onPressed: () {
+                  print('menu clicked');
+                },
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
